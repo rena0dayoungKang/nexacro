@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Form_Top" width="1280" height="100" titletext="Form_Top" font="italic 700 15pt/normal &quot;펜흘림&quot;" background="lightyellow">
+    <Layouts>
+      <Layout width="1280" height="100" screenid="Desktop_screen">
+        <Static id="Static00" taborder="0" text="코스타 은행" left="35.00" top="25" width="120" height="50"/>
+        <Static id="sttMakeAccount" taborder="1" text="계좌개설" left="285.00" top="25" width="80" height="50" font="normal 700 13pt/normal &quot;펜흘림&quot;" color="darkblue" onclick="sttMakeAccount_onclick"/>
+        <Static id="sttDeposit" taborder="2" text="입금" left="405.00" top="25" width="50" height="50" font="normal 700 13pt/normal &quot;펜흘림&quot;" color="darkblue" onclick="sttDeposit_onclick"/>
+        <Static id="sttWithdraw" taborder="3" text="출금" left="480.00" top="25" width="50" height="50" font="normal 700 13pt/normal &quot;펜흘림&quot;" color="darkblue" onclick="sttWithdraw_onclick"/>
+        <Static id="sttAccount" taborder="4" text="계좌조회" left="560.00" top="25" width="75" height="50" font="normal 700 13pt/normal &quot;펜흘림&quot;" color="darkblue" onclick="sttAccount_onclick"/>
+        <Static id="sttAllAccount" taborder="5" text="전체계좌조회" left="668.00" top="25" width="107" height="50" font="normal 700 13pt/normal &quot;펜흘림&quot;" color="darkblue" onclick="sttAllAccount_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[var app = nexacro.getApplication();
+this.sttMakeAccount_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
+{
+	app.mainframe.VFrameSet00.WorkFrame.formurl="FrameBase::Form_MakeAccount.xfdl";
+};
+
+this.sttAccount_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
+{
+	app.mainframe.VFrameSet00.WorkFrame.formurl="FrameBase::Form_AccountInfo.xfdl";
+};
+
+this.sttDeposit_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
+{
+	app.mainframe.VFrameSet00.WorkFrame.formurl="FrameBase::Form_Deposit.xfdl";
+};
+
+this.sttWithdraw_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
+{
+	app.mainframe.VFrameSet00.WorkFrame.formurl="FrameBase::Form_Withdraw.xfdl";
+};
+
+this.sttAllAccount_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
+{
+	app.mainframe.VFrameSet00.WorkFrame.formurl="FrameBase::Form_AllAccountInfo.xfdl";
+};
+]]></Script>
+  </Form>
+</FDL>
